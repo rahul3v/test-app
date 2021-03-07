@@ -1,5 +1,5 @@
 //import React from 'react';
-import {searchFun,sortFun,pageFun} from './App.js'
+import {searchFun,sortFun,pageFun} from './lib/scripts.js'
 
 test('Pageination, Total Page count', () => {
     expect(pageFun(100,9)).toEqual(12);
