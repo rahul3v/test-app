@@ -4,11 +4,15 @@ const Table=({searchData})=>{
     <div className="table-box">
       <table>
       <thead>
-        <tr>
+        <tr className="mhide">
         <th>Image</th>
         <th>title</th>
         <th>description</th>
         <th>updated</th>
+        </tr>
+        <tr className="tmobile">
+        <th>Feeds</th>
+        <th></th>
         </tr>
       </thead>
       <tbody>
@@ -18,9 +22,14 @@ const Table=({searchData})=>{
             <td>
               <img src="/logo192.png" alt={d.image}/>
             </td>
-            <td>{d.name}</td>
-            <td>{d.description}</td>
-            <td>{`${new Date(d.dateLastEdited).toLocaleString()}`}</td>
+            <td className="mhide">
+              {d.name}</td>
+            <td>
+              <h2 className="mobile">{d.name}</h2>
+              {d.description}<br/>
+              <p class="time">{`${new Date(d.dateLastEdited).toLocaleString()}`}</p>
+              </td>
+            <td className="mhide">{`${new Date(d.dateLastEdited).toLocaleString()}`}</td>
           </tr>
         )
       })}

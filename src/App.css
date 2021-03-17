@@ -3,6 +3,7 @@
   width:100%;
 }
 .container>h1{margin:0 10px;}
+
 .flex-box{
   display:flex;
   justify-content:space-between;
@@ -98,10 +99,11 @@ svg.icon{min-width:24px}
 }
 table{
   border-spacing: 0;
-  min-width:580px;
+  /* min-width:580px; */
 }
 table img{
   max-width:100px;
+  min-width:60px;
 }
 thead{
   background: #f4f4f4;
@@ -118,5 +120,23 @@ td{
   font-size:14px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
+td h2{font-size:16px;margin-bottom:5px;}
 td:nth-child(2){font-weight:bold;}
+td .time,
 td:nth-child(4){font-style: italic;}
+td .time{font-size:12px;margin-top:10px;}
+
+.mobile,.tmobile{
+  display:none;
+}
+@media screen and (max-width:640px){
+  .tmobile{
+    display:table-row;
+  }
+  .mobile{
+    display:block;
+  }
+  .mhide{
+    display:none;
+  }
+}
